@@ -1,7 +1,11 @@
 package com.yoo.core.member;
 
 public class MemberServiceImpl implements MemberService {
-    private MemberRepository memberRepository = new MemoryMemberRepository();
+    private MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = new MemoryMemberRepository();
+    }
 
     @Override
     public void join(Member member) {
