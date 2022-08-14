@@ -2,8 +2,11 @@ package com.yoo.core.discount;
 
 import com.yoo.core.member.Grade;
 import com.yoo.core.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+@Component
+@Qualifier("fixDiscountPolicy_sub")
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountAmount = 1000;
