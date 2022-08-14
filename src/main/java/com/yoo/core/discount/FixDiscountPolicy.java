@@ -2,6 +2,7 @@ package com.yoo.core.discount;
 
 import com.yoo.core.member.Grade;
 import com.yoo.core.member.Member;
+import org.springframework.stereotype.Component;
 
 public class FixDiscountPolicy implements DiscountPolicy {
 

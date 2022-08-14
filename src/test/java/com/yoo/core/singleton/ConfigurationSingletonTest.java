@@ -25,4 +25,13 @@ public class ConfigurationSingletonTest {
         System.out.println("memberRepository = " + memberRepository);
 
     }
+    @Test
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig appConfig = ac.getBean(AppConfig.class);
+        System.out.println("beanName = " + appConfig);
+
+    }
+
+
 }
